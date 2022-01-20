@@ -31,7 +31,9 @@
 
     <string name="edit_hint">Value</string>
     <string name="seek_value_edit_label">Set value</string>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
 
+    <string name="dlg_ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="default_text">Default</string>
 </resources>

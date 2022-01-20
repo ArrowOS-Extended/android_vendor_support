@@ -14,25 +14,28 @@
  * limitations under the License.
  */
 
-package com.arrow.support.preferences;
+package org.aospextended.support.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-public class CustomSecureSeekBarPreference extends CustomSeekBarPreference {
+import org.aospextended.support.preference.SystemSettingsStore;
 
-    public CustomSecureSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
+public class SystemSettingMasterSwitchPreference extends MasterSwitchPreference {
+
+    public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public CustomSecureSeekBarPreference(Context context, AttributeSet attrs) {
+    public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public CustomSecureSeekBarPreference(Context context) {
-        super(context, null);
-        setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
+    public SystemSettingMasterSwitchPreference(Context context) {
+        super(context);
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
+
 }
